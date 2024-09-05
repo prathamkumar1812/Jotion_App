@@ -13,7 +13,7 @@ import { Item } from "./Item";
 
 
 interface DocumentListProps {
-    parentDoucmentId: Id<"documents">;
+    parentDoucmentId?: Id<"documents">;
     level?: number;
     data?:Doc<"documents">[];
 }

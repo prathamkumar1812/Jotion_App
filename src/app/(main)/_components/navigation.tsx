@@ -13,16 +13,20 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import TrashBox from "./TrashBox";
 import { useSearch } from "@/hooks/use-search";
 import { Navbar } from "./navbar";
+import { useRouter } from "next/router";
 
 
 function Navigation() {
   const search=useSearch();
   const pramas=useParams();
+  const router=useRouter();
   const pathanme = usePathname();
   const isMobile = useMediaQuery("(max-width: 768px)");
   const Create=useMutation(api.documents.createDocument);
   const onCreate=()=>{
-     const promise=Create({title:"Untitled"});
+     const promise=Create({title:"Untitled"}).then((documentId)=>{
+        router.push(`/documents/${documentId}`);
+     });
       toast.promise(promise,{
           loading:"Creating...",
           success:"Document Created",
