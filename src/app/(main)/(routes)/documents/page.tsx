@@ -8,9 +8,9 @@ import { api } from "../../../../../convex/_generated/api";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 
-type Props = {}
 
-function page({}: Props) {
+
+function Page() {
   const {user}=useUser();
   const router=useRouter();
   const Create=useMutation(api.documents.createDocument);
@@ -38,4 +38,4 @@ function page({}: Props) {
   )
 }
 
-export default page
+export default Page
