@@ -4,7 +4,7 @@ import { useParams } from "next/navigation";
 import { Id } from "../../../../convex/_generated/dataModel";
 import { BadgeIndianRupee, MenuIcon } from "lucide-react";
 import { Title } from "./Title";
-import { Banner } from "./banner";
+import { Banner } from "./Banner";
 import { Menu } from "./Menu";
 import { Publish } from "./Publish";
 
