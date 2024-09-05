@@ -21,10 +21,10 @@ export default function UserItems({}: Props) {
        <div role='button' className='flex text-sm items-center  w-full p-3  hover:bg-primary/5'>
         <div className='max-w-[150px] flex items-center gap-x-2'>
          <Avatar className='h-10 w-10'>
-          <AvatarImage src={user?.imageUrl} alt={user.fullName} />
+          <AvatarImage src={user?.imageUrl} alt={user?.fullName||undefined} />
          </Avatar>
          <span className='text-start font-medium line-clamp-1'>
-          {user.fullName}&apos;s Zotion
+          {user?.fullName}&apos;s Zotion
          </span>
         </div>
         <ChevronsLeftRight className=' rotate-90 text-muted-foreground w-4 h-4 ml-2' />
