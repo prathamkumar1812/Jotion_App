@@ -52,6 +52,6 @@ export const Cover=({url ,preview}:CoverProps)=>{
 }
 Cover.Skeleton=function CoverSkeleton(){
     return(
-        <Skeleton/>
+        <Skeleton className="w-full h-[12vh]"/>
     )
 }

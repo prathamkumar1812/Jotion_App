@@ -13,7 +13,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import TrashBox from "./TrashBox";
 import { useSearch } from "@/hooks/use-search";
 import { Navbar } from "./navbar";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 
 function Navigation() {

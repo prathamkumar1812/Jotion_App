@@ -16,7 +16,7 @@ interface BannerProps {
     const restore=useMutation(api.documents.restore);
     const onRemove=()=>{
       const promise=remove({id:documentId})
-        toast.promise(promise,{
+       toast.promise(promise,{
             loading:"Deleting...",
             success:"Document Deleted",
             error:"Failed to delete document"
